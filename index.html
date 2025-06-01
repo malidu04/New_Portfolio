@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malidu Pahasara - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Additional styles for photo integration */
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #6366f1;
+            position: relative;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            box-shadow: 0 8px 32px rgba(99, 102, 241, 0.3);
+        }
+
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-avatar:hover img {
+            transform: scale(1.1);
+        }
+
+        .profile-avatar i {
+            font-size: 3rem;
+            color: white;
+        }
+
+        /* Fallback styles when no image is loaded */
+        .profile-avatar.no-image {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Malidu</span>
+                <span class="logo-dot">.</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="greeting">Hello, I'm</span>
+                <h1 class="hero-title">Malidu Pahasara</h1>
+                <p class="hero-subtitle">Full-Stack Developer & Quality Assurance Professional</p>
+                <p class="hero-description">Passionate about creating robust software solutions and ensuring exceptional quality through systematic testing and development.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-avatar" id="profileAvatar">
+                        <!-- Replace 'your-photo.jpg' with the actual path to your photo -->
+                        <img src="me.png" alt="Malidu Pahasara" id="profileImage" onerror="this.style.display='none'; document.getElementById('fallbackIcon').style.display='block';">
+                        <i class="fas fa-user" id="fallbackIcon" style="display: none;"></i>
+                    </div>
+                    <div class="profile-info">
+                        <h3>Malidu Pahasara</h3>
+                        <p>IT Professional</p>
+                        <div class="profile-status">
+                            <span class="status-dot"></span>
+                            Available for work
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Get to know me</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">I'm a passionate Information Technology student with hands-on experience in Quality Assurance and full-stack development. Currently pursuing my BSc (Hons) in Information Technology at SLIIT, I have completed 6 semesters with a strong focus on modern web technologies.</p>
+                    
+                    <p>My professional experience includes working as a Quality Assurance Intern at Loons Lab PV.LTD, where I honed my skills in creating test plans, identifying software defects, and ensuring quality standards. I'm proficient in the MERN stack, Spring Boot, and have a keen eye for UI/UX design.</p>
+                    
+                    <p>Beyond coding, I'm actively involved in teaching at Dhamma School and enjoy reading, writing, swimming, and traveling in my free time.</p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>BSc IT Student at SLIIT</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-briefcase"></i>
+                            <span>QA Professional</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-code"></i>
+                            <span>Full-Stack Developer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>6+</h3>
+                                <p>Months QA Experience</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>10+</h3>
+                                <p>Technical Skills</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>3</h3>
+                                <p>Major Projects</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>7A's</h3>
+                                <p>O/L Results</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What I do</span>
+                <h2 class="section-title">Technical Skills</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <p>Creating responsive and interactive user interfaces with modern technologies and best practices.</p>
+                    <div class="skill-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Responsive Design</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="85"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend Development</h3>
+                    </div>
+                    <p>Building robust server-side applications, APIs, and database management systems.</p>
+                    <div class="skill-tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">REST APIs</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="80"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <p>Proficient in multiple programming languages for various applications and platforms.</p>
+                    <div class="skill-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">C</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="75"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h3>Quality Assurance</h3>
+                    </div>
+                    <p>Ensuring software quality through systematic testing, validation, and defect management.</p>
+                    <div class="skill-tags">
+                        <span class="tag">Test Planning</span>
+                        <span class="tag">Bug Reporting</span>
+                        <span class="tag">Data Analysis</span>
+                        <span class="tag">Automation</span>
+                        <span class="tag">Documentation</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="90"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My work</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Vehicle Service Management System</h3>
+                        <p>A comprehensive web application built with MERN Stack for managing vehicle service operations, appointments, and customer records with real-time updates.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Labandi.com Redesign</h3>
+                        <p>Complete UI/UX redesign project focusing on improving user experience, modern design principles, and responsive layouts with enhanced accessibility.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX Design</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>GYM Management Application</h3>
+                        <p>Full-stack application for gym management featuring member registration, workout tracking, payment processing, and comprehensive administrative tools.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My journey</span>
+                <h2 class="section-title">Experience & Education</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Quality Assurance Intern</h3>
+                            <span class="timeline-date">Jan 2024 - Jul 2024</span>
+                        </div>
+                        <h4>Loons Lab PV.LTD • Colombo, Sri Lanka</h4>
+                        <ul>
+                            <li>Created and executed comprehensive test plans and test cases for web applications</li>
+                            <li>Identified software defects and collaborated with development teams for resolution</li>
+                            <li>Analyzed large datasets to identify trends and patterns in application behavior</li>
+                            <li>Ensured final products met established quality standards and specifications</li>
+                        </ul>
+                        <div class="timeline-skills">
+                            <span class="skill-badge">Test Planning</span>
+                            <span class="skill-badge">Bug Tracking</span>
+                            <span class="skill-badge">Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>BSc (Hons) Information Technology</h3>
+                            <span class="timeline-date">May 2021 - Present</span>
+                        </div>
+                        <h4>SLIIT • Malabe, Sri Lanka</h4>
+                        <ul>
+                            <li>Completed 6 semesters with specialization in Information Technology</li>
+                            <li>Hands-on experience in software development and system design</li>
+                            <li>Major projects in web development, mobile applications, and database systems</li>
+                            <li>Strong foundation in data structures, algorithms, and software engineering</li>
+                        </ul>
+                        <div class="timeline-skills">
+                            <span class="skill-badge">Software Engineering</span>
+                            <span class="skill-badge">Database Design</span>
+                            <span class="skill-badge">Web Development</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Dhamma School Teacher</h3>
+                            <span class="timeline-date">2008 - 2022</span>
+                        </div>
+                        <h4>Parama Dhamma Temple • Pannipitiya, Sri Lanka</h4>
+                        <ul>
+                            <li>Teaching religious studies and mentoring students of various age groups</li>
+                            <li>Completed Bauddha Dharmacharya examination with distinction</li>
+                            <li>Developed strong communication, leadership, and interpersonal skills</li>
+                            <li>Organized community events and educational programs</li>
+                        </ul>
+                        <div class="timeline-skills">
+                            <span class="skill-badge">Leadership</span>
+                            <span class="skill-badge">Communication</span>
+                            <span class="skill-badge">Teaching</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Get in touch</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-description">I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>Malidupahasara48@gmail.com</p>
+                            <a href="mailto:Malidupahasara48@gmail.com" class="contact-link">Send Email</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+94 76 961 3158</p>
+                            <a href="tel:0769613158" class="contact-link">Call Now</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Pannipitiya, Sri Lanka</p>
+                            <a href="#" class="contact-link">View Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/malidu-pahasara-89611527b" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/malidu04" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="mailto:Malidupahasara48@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Malidu Pahasara. All rights reserved.</p>
+                <p>Built with ❤️ using HTML, CSS & JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
